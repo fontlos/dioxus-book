@@ -1,0 +1,26 @@
+[package]
+name = "book-compiler"
+version = "0.0.0"
+edition = "2021"
+
+[dependencies]
+proc-macro2 = { version = "1.0.92" }
+quote = "1.0.37"
+syn = "2.0.91"
+book-tool = { path = "../book-tool" }
+anyhow = "1.0.95"
+serde = { version = "1.0.216", features = ["derive"] }
+serde_json = "1.0.134"
+toml = "0.8.19"
+macro_state = "0.2.1"
+convert_case = "0.6.0"
+postcard = { version = "1.1.1", features = ["use-std"] }
+pulldown-cmark = "0.12.2"
+syntect = { version = "5.2.0", features = ["plist-load"] }
+dioxus-rsx = { version = "0.6.1" }
+dioxus-autofmt = { version = "0.6.1" }
+prettyplease = "0.2.25"
+
+[features]
+default = ["manganis"]
+manganis = []

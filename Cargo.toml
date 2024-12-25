@@ -1,0 +1,23 @@
+[package]
+name = "dioxus-book"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [
+    "./book-compiler",
+    "./book-tool",
+]
+
+[dependencies]
+book-compiler = { path = "./book-compiler" , optional = true}
+book-tool = { path = "./book-tool" , optional = true}
+
+[features]
+default = ["book"]
+book = ["book-tool"]
+build = ["book-compiler"]
+
+[[example]]
+name = "build_book"
+required-features = ["build"]
